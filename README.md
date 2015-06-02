@@ -3,10 +3,10 @@ IndieDashboard
 Dashboard for indie mobile developer, who don't want or can't use large paid system.
 ## Features?
 - Statistics your mobile app/game by install/usage.
-- Cross-promotion: promotion new app/game from old app/game.
+- Cross-promotion manager: add, edit, delete the new app/game promotion.
 - Update manager: link to new update or new url if you update your app.
 - Social-promotion: post a promotion message to multi facebook group.
-- Leaderboard: a simple leaderboard.
+- Leaderboard: a simple leaderboard for game.
 
 ## Todos?
 - APIs for client,
