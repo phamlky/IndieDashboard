@@ -1,0 +1,41 @@
+
+<div class="row">
+	<div class="col-xs-1">
+    <button class="btn btn-primary" ng-click="create()">Create</button>
+	</div>
+	<div class="col-xs-3">
+		<select ng-model="searchparam.app_id" class="form-control">
+			<option value="" selected>-- Select a app --</option>
+			<option value={{app.app_id}} ng-repeat="app in apps">{{app.app_name}}</option>
+		</select>
+	</div>
+	<div class="col-xs-8">
+		
+	</div>
+</div>
+
+<div class="row">
+    <table class="table table-bordered table-striped">
+        <tr class="success">
+			<th>AppId</th>
+            <th>ScoreId</th>
+            <th>Value1</th>
+            <th>Value2</th>
+			<th>Value3</th>
+			<th>Value4</th>
+			<th></th>
+        </tr>
+        <tr ng-repeat="sco in scos | filter: searchparam">
+			<input type="hidden" ng-model="searchApp.app_id" ng-init="searchApp.app_id=sco.app_id"/>
+			<td ng-repeat="app in apps | filter: searchApp:app_id">{{app.app_name}}</td>		
+            <td>{{sco.sco_id}}</td>
+            <td>{{sco.sco_val1}}</td>
+            <td>{{sco.sco_val2}}</td>
+			<td>{{sco.sco_val3}}</td>
+			<td>{{sco.sco_val4}}</td>
+			<td>
+                <button class="btn btn-primary" ng-click="delete(sco.sco_id)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

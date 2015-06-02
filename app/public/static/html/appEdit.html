@@ -1,0 +1,32 @@
+
+<div class="row">
+    <table class="table">
+        <tr>
+            <th class="vert-align">App Id</th>
+            <td>
+                <input readonly type="text" ng-model="app.app_id" class="form-control" placeholder="App Id" />
+            </td>
+        </tr>
+        <tr>
+            <th class="vert-align">App Name</th>
+            <td>
+                <input type="text" ng-model="app.app_name" class="form-control" placeholder="App Name" />
+            </td>
+        </tr>
+		<tr>
+            <th class="vert-align">App Store</th>
+            <td>
+				<select ng-model="app.app_store">
+					<option ng-value="{{store.value}}" ng-repeat="store in stores" ng-selected="{{store.value == app.app_store}}">{{store.name}}</option>
+				</select>
+            </td>
+        </tr>
+        <tr>
+            <th><button class="btn btn-primary" ng-click="delete()">Delete</button></th>
+
+			<td style="padding-left: 10px">
+                <button class="btn btn-primary" ng-click="update()">Update</button>
+            </td>
+        </tr>
+    </table>
+</div>

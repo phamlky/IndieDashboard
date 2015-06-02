@@ -1,0 +1,73 @@
+<div id="fbloader"></div>
+<div class="row">
+    <table class="table">
+		<tr>
+			<th></th>
+			<td><button class="btn btn-primary" ng-click="fetch(fb.fb_id)">Fetch List Group</button></td>
+		</tr>
+        <tr>
+            <th class="vert-align">Message</th>
+            <td>
+                <input type="text" ng-model="fbPost.message" class="form-control" placeholder="Message"/>
+            </td>
+        </tr>
+		
+		<tr>
+            <th class="vert-align">Link URL</th>
+            <td>
+                <input type="text" ng-model="fbPost.link" class="form-control" placeholder="Message"/>
+            </td>			
+		</tr>		
+		
+		<tr>
+            <th class="vert-align">Link picture</th>
+            <td>
+                <input type="text" ng-model="fbPost.picture" class="form-control" placeholder="Message"/>
+            </td>			
+		</tr>
+		
+		<tr>
+            <th class="vert-align">Link name</th>
+            <td>
+                <input type="text" ng-model="fbPost.name" class="form-control" placeholder="Message"/>
+            </td>			
+		</tr>
+		<tr>
+            <th class="vert-align">Link caption</th>
+            <td>
+                <input type="text" ng-model="fbPost.caption" class="form-control" placeholder="Message"/>
+            </td>			
+		</tr>		
+		
+		<tr>
+            <th class="vert-align">Link Description</th>
+            <td>
+                <input type="text" ng-model="fbPost.description" class="form-control" placeholder="Message"/>
+            </td>			
+		</tr>			
+		<tr>
+			<th>Group</th>
+			<td>
+				<div class="row">
+					<div class="col-xs-6">
+						<table class="table table-bordered table-striped">
+							<tr ng-repeat="group in groups.data">
+								<th class="vert-align success">{{group.name}}</th>
+								<td>
+									<input type="checkbox" ng-model="group.IsSend" />
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</td>
+		</tr>
+        <tr>
+            <th></th>
+            <td style="padding-left: 10px">
+                <button class="btn btn-primary" ng-click="post()">Post</button>
+            </td>
+        </tr>
+    </table>
+</div>
+

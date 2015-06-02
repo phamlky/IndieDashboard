@@ -1,0 +1,38 @@
+
+<div class="row">
+    <table class="table">
+        <tr>
+            <th class="vert-align">Adv Id</th>
+            <td>
+                <input readonly type="text" ng-model="adv.adv_id" class="form-control" placeholder="Adv Id" />
+            </td>
+        </tr>
+		<tr>
+            <th class="vert-align">Adv Message</th>
+            <td>
+                <input type="text" ng-model="adv.adv_msg" class="form-control" placeholder="App Name" />
+            </td>
+        </tr>
+        <tr>
+            <th class="vert-align">Adv Image</th>
+            <td>
+                <input type="text" ng-model="adv.adv_img" class="form-control" placeholder="App Name" />
+            </td>
+        </tr>
+		<tr>
+			<th class="vert-align">App Id</th>
+            <td>
+				<select ng-model="adv.app_id">
+					<option value="{{app.app_id}}" ng-repeat="app in apps" ng-selected="{{app.app_id == adv.app_id}}">{{app.app_name}}</option>
+				</select>				
+            </td>
+		</tr>
+        <tr>
+            <th></th>
+
+			<td style="padding-left: 10px">
+                <button class="btn btn-primary" ng-click="update()">Update</button>
+            </td>
+        </tr>
+    </table>
+</div>

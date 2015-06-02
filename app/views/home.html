@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats System</title>
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<script src="/static/js/angular.min.js"></script>
+	<script src="/static/js/angular-route.min.js"></script>
+	<script src="/static/js/angular-resource.min.js"></script>
+	<script src="/static/js/factory/facebook.js"></script>
+	<script src="/static/js/app.js"></script>
+	<script src="/static/js/factory/appFactory.js"></script>
+	<script src="/static/js/controller/appController.js"></script>
+	
+
+
+</head>
+<body>
+<base href="/" />
+<facebook app-id='419910764877899'></facebook>
+<div class="container">
+	
+    <div class="row" style="margin-bottom: 10px; margin-top: 10px;">
+        <a href="Panel/Stat">Statistic</a> |
+        <a href="Panel/Adv">Cross-promotion</a> |
+        <a href="Panel/Update">Update manage</a> |
+        <a href="Panel/Social/Facebook">Social-promotion</a> |
+        <a href="Panel/Score">LeaderBoard</a> |
+    </div>
+    <ng-view></ng-view>
+</div>
+
+<script>
+</script>
+
+</body>
+</html>

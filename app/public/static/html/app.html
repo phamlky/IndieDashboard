@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-xs-1">
+		<button class="btn btn-primary" ng-click="create()">Create</button>
+	</div>
+	<div class="col-xs-3">
+		<select ng-model="searchparam.app_store" class="form-control">
+			<option value="" selected>-- Select a store --</option>
+			<option ng-value="{{store.value}}" ng-repeat="store in stores">{{store.name}}</option>
+		</select>
+	</div>
+	<div class="col-xs-8">
+		
+	</div>
+</div>
+
+<div class="row">
+    <table class="table table-bordered table-striped">
+        <tr class="success">
+            <th>AppId</th>
+            <th>AppName</th>
+			<th>AppStore</th>
+            <th>Install</th>
+			<th>Usage</th>
+			<th>Date</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="app in apps | filter: searchparam">
+            <td>{{app.app_id}}</td>
+            <td>{{app.app_name}}</td>
+			<td>{{app.app_store}}</td>
+            <td>{{app.download}}</td>
+            <td>{{app.use}}</td>
+			<td>{{app.date}}</td>
+            <td>
+                <button class="btn btn-primary" ng-click="edit(app.app_id)">Edit</button>
+            </td>
+        </tr>
+    </table>
+</div>

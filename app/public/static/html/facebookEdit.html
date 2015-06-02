@@ -1,0 +1,39 @@
+
+<div class="row">
+    <table class="table">
+        <tr>
+            <th class="vert-align">Fb Id</th>
+            <td>
+                <input readonly type="text" ng-model="fb.fb_id" class="form-control" placeholder="Fb Id" />
+            </td>
+        </tr>
+        <tr>
+            <th class="vert-align">App Id</th>
+            <td>
+				<select ng-model="fb.app_id">
+					<option value="{{app.app_id}}" ng-repeat="app in apps" ng-selected="{{app.app_id == fb.app_id}}">{{app.app_name}}</option>
+				</select>            
+			</td>
+        </tr>
+		<tr>
+            <th class="vert-align">Client Id</th>
+            <td>
+                <input type="text" ng-model="fb.client_id" class="form-control" placeholder="Client Id" />
+            </td>
+        </tr>
+		<tr>
+            <th class="vert-align">Secret Key</th>
+            <td>
+                <input type="text" ng-model="fb.secret_key" class="form-control" placeholder="Secret Key" />
+
+            </td>
+        </tr>		
+        <tr>
+            <th><button class="btn btn-primary" ng-click="delete()">Delete</button></th>
+
+			<td style="padding-left: 10px">
+                <button class="btn btn-primary" ng-click="update()">Update</button>
+            </td>
+        </tr>
+    </table>
+</div>
