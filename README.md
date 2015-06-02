@@ -7,6 +7,7 @@ Dashboard for indie mobile developer, who don't want or can't use large paid sys
 - Update manager: link to new update or new url if you update your app.
 - Social-promotion: post a promotion message to multi facebook group.
 - Leaderboard: a simple leaderboard.
+
 ## Todos?
 - APIs for client,
 - Charts for Statistics,
@@ -14,8 +15,10 @@ Dashboard for indie mobile developer, who don't want or can't use large paid sys
 - Multi app for facebook,
 - Promotion code.
 - ...
+
 ## Require?
 - NodeJS with NPM installed
+
 ## Install?
 - Clone, 
 - Setting your mongoDB URI at: /app/config/database.js
